@@ -1,0 +1,26 @@
+{% extends '../base.html' %}
+
+{% block body %}
+
+<div class="container d-flex justify-content-center align-items-center" style="height: 90vh;">
+
+    <form style="width: 70%;">
+
+        <div class="mb-3 d-flex justify-content-center align-items-center">
+          <label for="title" class="form-label">Title</label>
+          <input type="text" class="form-control mx-2" id="title" name="title" placeholder="Enter blog title">
+        </div>
+
+        <div class="mb-3 d-flex justify-content-center align-items-center">
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control mx-2" id="description" name="description" rows="3" placeholder="Enter blog description"></textarea>
+          </div>
+
+        
+
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>
+
+
+{% endblock body %}

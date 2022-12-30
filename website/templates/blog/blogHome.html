@@ -1,0 +1,54 @@
+{% extends '../base.html' %}
+
+{% block body %}
+
+<div class="container d-flex justify-content-center align-items-center" style=" max-width: 100vw;">
+
+    <div style="width: 70%;margin: 2rem;" >
+        <h1>Have something to share?</h1>
+
+        <div class="rounded" style="border: 1px solid gray;padding: 1rem;display: flex;flex-direction: column;justify-content: center;align-items: center;">
+
+            <div style="display: flex;justify-content: space-between;align-items: center; width:100%">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+
+                <a href="/add_post"><button class="btn btn-success" type="submit">Write Post</button></a>
+
+            </div>
+            
+            <div  class="d-flex flex-column justify-content-center align-items-center m-3" style="width:100%">
+                
+                <article class="blog-post rounded my-2" style="width:100%;border: 1px solid gray;padding: 0.5rem;">
+                    <a href="/"><h4 class="blog-post-title mb-1">Sample blog post</h4></a>
+                    <p class="blog-post-meta">January 1, 2021 by <a href="/">Mark</a></p>
+                </article>
+
+                <article class="blog-post rounded my-2" style="width:100%;border: 1px solid gray;padding: 0.5rem;">
+                    <a href="/"><h4 class="blog-post-title mb-1">Sample blog post</h4></a>
+                    <p class="blog-post-meta">January 1, 2021 by <a href="/">Mark</a></p>
+                </article>
+
+                
+
+                
+
+
+                
+            </div>
+
+        </div>
+    </div>
+
+    <div style="width: 20%;">
+
+    </div>
+</div>
+
+
+
+
+{% endblock body %}
+
