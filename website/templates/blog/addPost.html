@@ -4,7 +4,9 @@
 
 <div class="container d-flex justify-content-center align-items-center" style="height: 90vh;">
 
-    <form style="width: 70%;">
+    <form action="/add_post" method="post" style="width: 70%;">
+
+      {% csrf_token %}
 
         <div class="mb-3 d-flex justify-content-center align-items-center">
           <label for="title" class="form-label">Title</label>

@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class Post(models.Model):
+
     title = models.CharField(max_length=100)
     description = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
@@ -16,11 +17,21 @@ class Post(models.Model):
 
 class Comment(models.Model):
     body = models.TextField()
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    # user = models.ForeignKey(User, on_delete=models.CASCADE)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE,related_name='comment')
     created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True, auto_now_add=False)
 
     def __str__(self):
         return self.body
 
+class Tags(models.Model):
+    name = models.CharField(max_length=30, blank=True, null=True)
+    created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True, auto_now_add=False)
+
+    def __str__(self):
+        if self.name== None:
+            return "None"
+        else:
+            return self.name

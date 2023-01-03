@@ -20,23 +20,19 @@
             </div>
             
             <div  class="d-flex flex-column justify-content-center align-items-center m-3" style="width:100%">
+
+                {% for post in posts %}
                 
                 <article class="blog-post rounded my-2" style="width:100%;border: 1px solid gray;padding: 0.5rem;">
-                    <a href="/"><h4 class="blog-post-title mb-1">Sample blog post</h4></a>
+                    <a href="/view_post/{{post.id}}"><h4 class="blog-post-title mb-1">{{post.title}}</h4></a>
                     <p class="blog-post-meta">January 1, 2021 by <a href="/">Mark</a></p>
                 </article>
 
-                <article class="blog-post rounded my-2" style="width:100%;border: 1px solid gray;padding: 0.5rem;">
-                    <a href="/"><h4 class="blog-post-title mb-1">Sample blog post</h4></a>
-                    <p class="blog-post-meta">January 1, 2021 by <a href="/">Mark</a></p>
-                </article>
-
+                
+                {% endfor %}
+                
                 
 
-                
-
-
-                
             </div>
 
         </div>
